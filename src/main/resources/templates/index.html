@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Spring Boot Journal</title>
+</head>
+<body>
+<h1>The List of journals here</h1>
+
+<div th:each="entry,status: ${journals}">
+<h4><span th:text="${entry.title}">TITLE</span></h4>
+<p><span th:text="${entry.createdAsShort}">CREATED</span></p>
+<p><span th:text="${entry.summary}">SUMMARY</span></p>
+</div>
+</body>
+</html>
